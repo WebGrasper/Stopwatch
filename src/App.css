@@ -1,0 +1,146 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.stopwatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #252c41;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+}
+
+.stopwatch h1 {
+  font-size: 6rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px #000000;
+}
+
+.stopwatch .stopwatch-face {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: inset 2px 2px 5px #000000;
+}
+
+.stopwatch .stopwatch-face:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.5rem;
+  height: 5rem;
+  background-color: #f98404;
+  border-radius: 5px;
+}
+
+.stopwatch .stopwatch-face .hand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  transform-origin: bottom center;
+  width: 1rem;
+  height: 5rem;
+  background-color: #f9aa33;
+  border-radius: 5px;
+  transition: transform 0.05s;
+}
+
+.stopwatch .stopwatch-face .hand.seconds {
+  width: 0.5rem;
+  height: 6rem;
+  background-color: #f98404;
+  border-radius: 0;
+}
+
+.stopwatch .stopwatch-face .hand.minutes {
+  width: 1rem;
+  height: 4.5rem;
+  background-color: #f9aa33;
+}
+
+.stopwatch .stopwatch-face .hand.hours {
+  width: 1rem;
+  height: 3rem;
+  background-color: #f0f0f0;
+}
+
+.stopwatch .stopwatch-face .hand.second-hand {
+  transform-origin: top center;
+}
+
+.stopwatch .stopwatch-face .hand.minute-hand {
+  transform-origin: bottom center;
+}
+
+.stopwatch .stopwatch-face .hand.hour-hand {
+  transform-origin: bottom center;
+}
+
+.stopwatch .stopwatch-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.stopwatch button {
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  margin: 1rem;
+  background-color: #f9aa33;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 2px 2px 5px #000000;
+}
+
+.stopwatch button:hover {
+  transform: scale(1.1);
+  background-color: #f98404;
+  color: #fff;
+  box-shadow: 2px 2px 10px #000000;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
